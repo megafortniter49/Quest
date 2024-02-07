@@ -5,11 +5,12 @@ def start():
           "Terms of Use (https://imgur.com/a/78iYaMk)")
     startgame = input("Continue? (Yes/No) ")
 
-    while startgame.lower() not in ["yes", "no"]:
+    while startgame.lower() != "yes" or startgame.lower() != "no":
         if startgame.lower() == "yes":
             entrance()
         elif startgame.lower() == "no":
             print("Goodbye, have a nice day.")
+            end = input("Press enter to quit")
             break
         else:
             print("Invalid input. Please answer 'Yes' or 'No'.")
